@@ -24,7 +24,7 @@ def preprocess_and_split():
     splitter = DatasetSplitter(df, target_col=target_col)
     splitter.stratified_split(test_size=0.2)
     splitter.undersample_major_classes(reduction_rate=0.15)    
-    #X_train, X_test, y_train, y_test = splitter.get_split()
+    
     X_train=splitter.X_train
     X_test=splitter.X_test
     y_train=splitter.y_train
