@@ -1,2 +1,2 @@
-# PredictAttack
+# PredictAttacks
 The main objective of this project is to develop a system based on machine learning models capable of classifying and predicting different types of cyberattacks. Starting from a dataset containing real network traffic, the project involves data analysis and preparation, the training of various models including Random Forest, Decision Tree, and MLP (Multi-Layer Perceptron), with the goal of evaluating their effectiveness in detecting eight different classes of attacks.
