@@ -30,10 +30,10 @@ class Preprocessor:
         if self.df is None:
             self.load_data()
 
-        # Rimozione dell'ultima colonna
+        # Rimozione della colonna "dataset"
         self.df = self.df.iloc[:, :-1]
 
-        # Rimozione della colonna "Label" se esiste, prevenire data leakage
+        # Rimozione della colonna "Label"
         if 'Label' in self.df.columns:
             self.df.drop(columns=['Label'], inplace=True)
         
