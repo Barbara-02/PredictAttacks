@@ -61,10 +61,8 @@ class ModelTrainer:
  
             pipeline = Pipeline([
                 ('imputer', SimpleImputer(strategy='mean')),
-                ('scaler', StandardScaler()),
-                ('pca', PCA(n_components=0.90)),
                 ('classifier', DecisionTreeClassifier(
-                    max_depth=8,                # Puoi personalizzare i parametri
+                    max_depth=8,                
                     min_samples_split=10,
                     min_samples_leaf=30,
                     random_state=42
@@ -113,12 +111,9 @@ class ModelTrainer:
         elif self.model_type == 'decision_tree':
             pipeline = Pipeline([
                 ('imputer', SimpleImputer(strategy='mean')),
-                ('scaler', StandardScaler()),
-                 ('pca', PCA()),
                 ('classifier', DecisionTreeClassifier(random_state=42))
             ])
             param_distributions = {
-                'pca__n_components': stats.uniform(0.8, 0.15),
                 'classifier__max_depth': [8, 10, 20, 30],
                 'classifier__min_samples_split': [5, 10, 20],
                 'classifier__min_samples_leaf': [2, 5, 10, 20],
