@@ -1,5 +1,5 @@
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -9,7 +9,6 @@ from sklearn.impute import SimpleImputer
 from sklearn.decomposition import PCA
 import joblib
 import os
-from sklearn.tree import DecisionTreeClassifier
  
  
 class ModelTrainer:
@@ -135,7 +134,7 @@ class ModelTrainer:
             }
  
         else:
-            raise ValueError("Modello non supportato. Scegli tra: 'random_forest', 'logistic_regression', 'mlp'")
+            raise ValueError("Modello non supportato. Scegli tra: 'random_forest', 'decision_tree', 'mlp'")
  
         #Applicazione della cross-validazione
         search = RandomizedSearchCV(
