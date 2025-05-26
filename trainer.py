@@ -101,8 +101,8 @@ class ModelTrainer:
             param_distributions = {
                 'classifier__n_estimators': [50, 100, 200],
                 'classifier__max_depth': [10, 20, 30],
-                'classifier__min_samples_split': [5, 10, 20], #prima era 2,5,10
-                'classifier__min_samples_leaf': [2, 5, 10, 20], #priam era 1,2,4
+                'classifier__min_samples_split': [5, 10, 20], 
+                'classifier__min_samples_leaf': [2, 5, 10, 20], 
                 'classifier__max_features': ['sqrt', 'log2', None]
 
             }
